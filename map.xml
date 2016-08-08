@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map proto="1.3.3">
+	<name>Old Tree CP</name>
+	<version>1.0.0</version>
+	<objective>コントロールポイントの制圧 / Capture the Control Point</objective>
+	<authors>
+			<author>MATSUKO89</author>
+	</authors>
+	<contributors>
+		<contributor>0yuki</contributor>
+		<contributor>coffee1375</contributor>
+		<contributor>d0u0b</contributor>
+		<contributor>HateDischarger</contributor>
+		<contributor>KokekoKko_</contributor>
+		<contributor>MONO</contributor>
+		<contributor>nezumi_</contributor>
+		<contributor>OverFuture</contributor>
+		<contributor>SiruVa</contributor>
+	</contributors>
+	<teams>
+		<team max="24" color="yellow">Paripi Team</team>
+		<team max="24" color="light purple">Shy Team</team>
+	</teams>
+	<kits>
+		<kit name="spawn">
+			<!-- 装備 -->
+			<chestplate bind="true">Chainmail Chestplate</chestplate>
+			<!-- ホットバー -->
+			<item slot="0" damage="-3000">Stone Sword</item>
+			<item slot="1" damage="-3000">Bow</item>
+			<item slot="5" amount="64">Cooked Beef</item>
+			<item slot="6" damage="8197" bind="true">potion</item>
+			<item slot="7" amount="1">Golden Apple</item>
+			<item slot="8" amount="32">Arrow</item>
+			<!-- ポーション効果 -->
+			<potion duration="4" amplifier="2">DAMAGE_RESISTANCE</potion>
+		</kit>
+		<kit name="Paripi" parents="spawn">
+			<helmet color="ffff00" damage="-3000" bind="true">Leather Helmet</helmet>
+			<leggings color="ffff00" damage="-3000" bind="true">Leather Leggings</leggings>
+			<boots color="ffff00" damage="-3000" bind="true">Leather Boots</boots>
+		</kit>
+		<kit name="Shy" parents="spawn">
+			<helmet color="ff00ff" damage="-3000" bind="true">Leather Helmet</helmet>
+			<leggings color="ff00ff" damage="-3000" bind="true">Leather Leggings</leggings>
+			<boots color="ff00ff" damage="-3000" bind="true">Leather Boots</boots>
+		</kit>
+	</kits>
+	<spawns>
+		<spawn team="Paripi" yaw="0" kit="Paripi">
+			<cuboid min="-3,9,-78" max="0,9,-75" />
+			<cuboid min="25,10,-72" max="28,10,-70" />
+		</spawn>
+		<spawn team="Shy" yaw="180" kit="Shy">
+			<cuboid min="-1,9,76" max="2,9,79" />
+			<cuboid min="-29,10,71" max="-26,10,73" />
+		</spawn>
+		<default yaw="-90">
+			<cuboid min="-60,45,-1" max="-57,45,2" />
+		</default>
+	</spawns>
+	<regions>
+		<apply block="deny-break" message="このマップではブロック編集はできません。/You can not modify blocks at this map.">
+			<negative>
+				<block>0,0,0</block>
+			</negative>
+		</apply>
+	</regions>
+<!-- テスト用
+	<controlpoints score-limit="2500">
+		<controlpoint name="Above" score="90">
+			<capture>
+				<cuboid min="-8,38,-7" max="8,43,9"></cuboid>
+			</capture>
+			<flag>
+				<cuboid min="-4,38,-3" max="3,38,4"></cuboid>
+			</flag>
+		</controlpoint>
+		<controlpoint name="Below" score="90">
+			<capture>
+				<cuboid min="-8,8,-7" max="8,12,9"></cuboid>
+			</capture>
+			<flag>
+				<cuboid min="-6,7,-5" max="5,7,6"></cuboid>
+			</flag>
+		</controlpoint>
+		<controlpoint name="Point P" score="50">
+			<capture>
+				<cuboid min="-36,9,-55" max="-20,13,-39"></cuboid>
+			</capture>
+			<flag>
+				<cuboid min="-32,8,-51" max="-25,8,-44"></cuboid>
+			</flag>
+		</controlpoint>
+		<controlpoint name="Point S" score="50">
+			<capture>
+				<cuboid min="20,9,41" max="36,13,57"></cuboid>
+			</capture>
+			<flag>
+				<cuboid min="24,8,45" max="31,8,52"></cuboid>
+			</flag>
+		</controlpoint>
+	</controlpoints>
+-->
+	<controlpoints score-limit="2500">
+		<controlpoint name="Above" score="90">
+			<capture>
+				<cuboid min="-5,38,-4" max="4,43,5"></cuboid>
+			</capture>
+			<flag>
+				<cuboid min="-4,38,-3" max="3,38,4"></cuboid>
+			</flag>
+		</controlpoint>
+		<controlpoint name="Below" score="90">
+			<capture>
+				<cuboid min="-6,8,-5" max="5,12,6"></cuboid>
+			</capture>
+			<flag>
+				<cuboid min="-6,7,-5" max="5,7,6"></cuboid>
+			</flag>
+		</controlpoint>
+		<controlpoint name="Point P" score="50">
+			<capture>
+				<cuboid min="-32,9,-51" max="-25,13,-44"></cuboid>
+			</capture>
+			<flag>
+				<cuboid min="-32,8,-51" max="-25,8,-44"></cuboid>
+			</flag>
+		</controlpoint>
+		<controlpoint name="Point S" score="50">
+			<capture>
+				<cuboid min="24,9,45" max="31,13,52"></cuboid>
+			</capture>
+			<flag>
+				<cuboid min="24,8,45" max="31,8,52"></cuboid>
+			</flag>
+		</controlpoint>
+	</controlpoints>
+	<killreward>
+		<item amount="1">Golden Apple</item>
+		<item slot="9" amount="8">Arrow</item>
+	</killreward>
+	<itemremove>
+		<item>Stone Sword</item>
+		<item>Bow</item>
+		<item>Arrow</item>
+		<item>Cooked Beef</item>
+		<item>Potion</item>
+		<item>Leather Helmet</item>
+		<item>Chainmail Chestplate</item>
+		<item>Leather Leggings</item>
+		<item>Leather Boots</item>
+	</itemremove>
+	<include src="tutorial.xml"/>
+	<tutorial>
+		<stage title="Control Point (CP)">
+			<message>
+				<line>This map is a "Control Point"(CP) map.</line>
+				<line>The objective is to capture the control point.</line>
+			</message>
+			<message lang="ja_JP">
+				<line>このマップは "Control Point(コントロールポイント)"(CP)マップです。</line>
+				<line>コントロールポイントを制圧し、先に3000ポイント集める事が目標です。</line>
+			</message>
+			<teleport>
+				<point yaw="-90" piitch="30">-59,60,0</point>
+			</teleport>
+		</stage>
+		<stage title="CP">
+			<message>
+				<line>This is Center Above point.</line>
+			</message>
+			<message lang="ja_JP">
+				<line>ここがAboveです。</line>
+			</message>
+			<teleport>
+				<point yaw="-90" pitch="85">-7,62,0</point>
+			</teleport>
+		</stage>
+		<stage title="CP">
+			<message>
+				<line>This is Center Below point.</line>
+			</message>
+			<message lang="ja_JP">
+				<line>ここがBelowです。</line>
+			</message>
+			<teleport>
+				<point yaw="-90" pitch="85">-7,22,0</point>
+			</teleport>
+		</stage>
+		<stage title="CP">
+			<message>
+				<line>This is Point P.</line>
+			</message>
+			<message lang="ja_JP">
+				<line>ここがPoint Pです。</line>
+			</message>
+			<teleport>
+				<point yaw="0" pitch="30">-28,14,-55</point>
+			</teleport>
+		</stage>
+		<stage title="CP">
+			<message>
+				<line>This is Point S.</line>
+			</message>
+			<message lang="ja_JP">
+				<line>ここがPoint Sです。</line>
+			</message>
+			<teleport>
+				<point yaw="180" pitch="30">27,14,56</point>
+			</teleport>
+		</stage>
+	</tutorial>
+</map>
